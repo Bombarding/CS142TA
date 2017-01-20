@@ -46,14 +46,14 @@ int main()
 	sleep(1);
 	cout << "." << endl;
 	cout << "" << endl;
-	double Rick = minutes / 60;
-	int Sanchez = Rick;
-	double Master = Rick - Sanchez;
-	double Blaster = Master * 60;
-	int Snowman = Blaster;
-	double Pro = Blaster - Snowman;
-	double Kraken = Pro * 60;
-	double MVP = Kraken;
+	double Rick = minutes / 60; //hours = minutes*60
+	int Sanchez = Rick; // h = hours
+	double Master = Rick - Sanchez; // temp1 = hours - h
+	double Blaster = Master * 60; // temp2 = temp1*60
+	int Snowman = Blaster; // temp3 = temp2
+	double Pro = Blaster - Snowman; // seconds = temp2 - temp3
+	double Kraken = Pro * 60; // sec = seconds * 60
+	double MVP = Kraken; // s = sec
 	cout << "You are " << Sanchez << " hours, " << Snowman << " minutes, and " << MVP << " seconds late!" << endl;
 	cout << "You now recieve the following information:" << endl;
 	sleep(3);
