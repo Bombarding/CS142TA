@@ -42,7 +42,9 @@ int main()
 		cout << ". ." << endl;
 		sleep(1);
 		cout << "." << endl;
+		Rome();
 		
+		/*
 		int Centurion; //M
 		int Optio; //C
 		int Tesserarius;//X
@@ -163,7 +165,7 @@ int main()
 				Boxcutter++;
 			}
 		}
-		
+		*/
 		cout << "" << endl;
 		cout << "" << endl;
 		cout << "Would you like to play again? (y/n) "<< endl;
@@ -182,6 +184,132 @@ int main()
 	}while((Repeat == 'y') || (Repeat == 'Y'));
 	
 	return 0;
+
+
+}
+
+int Rome()
+{
+	int Centurion; //M
+		int Optio; //C
+		int Tesserarius;//X
+		int Decurio;//I
+		
+		Centurion = (input/1000);
+		input = input % 1000;
+		Optio = (input/100);
+		input = input % 100;
+		Tesserarius = (input/10);
+		input = input % 10;
+		Decurio = (input/1);
+		input = input % 1;
+		
+		cout << "We have calculated that your number is:" << endl;
+		//M
+		if(Centurion > 0)
+		{
+			int Boxcutter = 0; //variable holder
+			while(Boxcutter<Centurion)
+			{
+				cout << "M";
+				Boxcutter++;
+			}
+		}
+		//C
+		if(Optio == 4)
+		{
+			cout << "CD";
+			
+		}
+		else if(Optio == 5)
+		{
+			cout << "D";
+		}
+		else if(Optio < 0 && Optio < 4)
+		{
+			int Boxcutter = 0;
+			while(Boxcutter < Optio)
+			cout << "C";
+			Boxcutter++;
+		}
+		else if(Optio == 9)
+		{
+			cout << "CM";
+		}
+		else if(Optio > 5 && Optio < 9)
+		{
+			cout << "D";
+			int Boxcutter = 0;
+			while (Boxcutter < Optio - 5)
+			{
+				cout << "C";
+				Boxcutter++;
+			}
+		}
+		//X
+		if(Tesserarius == 4)
+		{
+			cout << "XL";
+		}
+		else if(Tesserarius == 5)
+		{
+			cout << "L";
+		}
+		else if(Tesserarius > 0 && Tesserarius < 4)
+		{
+			int Boxcutter = 0;
+			while(Boxcutter < Tesserarius)
+			{
+				cout << "X";
+				Boxcutter++;
+			}
+		}
+		else if(Tesserarius == 9)
+		{
+			cout << "XC";
+		}
+		else if( Tesserarius > 5 && Tesserarius < 9)
+		{
+			cout << "L";
+			int Boxcutter = 0;
+			while(Boxcutter < Tesserarius - 5)
+			{
+				cout << "X";
+				Boxcutter++;
+			}
+		}
+		//I
+		if(Decurio == 4)
+		{
+			cout << "IV";
+		}
+		else if(Decurio == 5)
+		{
+			cout << "V";
+		}
+		else if(Decurio > 0 && Decurio < 4)
+		{
+			int Boxcutter = 0;
+			while(Boxcutter < Decurio)
+			{
+				cout << "I";
+				Boxcutter++;
+			}
+		}
+		else if(Decurio == 9)
+		{
+			cout << "IX";
+		}
+		else if(Decurio > 5 && Decurio < 9)
+		{
+			cout << "V";
+			int Boxcutter = 0;
+			while(Boxcutter < Decurio - 5)
+			{
+				cout << "I";
+				Boxcutter++;
+			}
+		}
 
 
 }
