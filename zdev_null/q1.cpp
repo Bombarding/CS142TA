@@ -13,11 +13,15 @@ int main()
 	c = (6/(2*12.0));
 	cout << c << endl;
 	int d;
-	d = (1*2*(6-34/9));
+	d = (1*2*(6-(34/9)));
 	cout << d << endl;
 	int e;
 	e = (11/7+2%8);
 	cout << e << endl;
+	
+	int f;
+	f = 2%8;
+	cout << f << endl;
 	
 	return 0;
 }

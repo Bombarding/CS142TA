@@ -8,11 +8,15 @@ int main()
 	cin >> n1;
 	cout << "Enter n2" << endl;
 	cin >> n2;
+	//+5
+	
 	int n1a = n1;
 	int n2a = n2;
 	double dec1, dec2;
 	dec1 = n1 - n1a;
 	dec2 = n2 - n2a;
+	//+5
+	
 	if(dec1 >= 0.5)
 	{
 		n1a += 1;
@@ -21,10 +25,10 @@ int main()
 	{
 		n2a += 1;
 	}
-	
+	//+5
 	int a = n1a * n2a;
 	cout << a << endl;
-	
+	//+5
 	return 0;
 }
 /*

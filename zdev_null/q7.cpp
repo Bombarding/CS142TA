@@ -10,16 +10,24 @@ int main()
 	if(q-- == 41)
 	{
 		q *= 3;
+		cout << "*q = " << q << endl;
+
 	}
-	else if(q-- == 41)
+	else if(q++ == 42)
 	{
 		q *= 2;
+		cout << "*q = " << q << endl;
 	}
 	else
 	{
 		c = 9;
+		cout << "*c = " << c << endl;
 	}
 	y = 'r';
+	cout << "*y = " << y << endl;
+	cout << "*z/c = " << z/c << endl;
+	
+	//if z/c >5 -5
 	if(z/c <= 5)
 	{
 		cout << q << endl;
