@@ -5,13 +5,12 @@ int main()
 {
 	int num, a, b, c, d;
 	cin >> num;
-	a = num/100;
-	num = num%100;
-	b = num/10;
-	num = num%10;
-	c = num/1;
-	num = num%1;
-	d = a+b+c;
+	
+	a = (num/100)*100;
+	b = ((num%100)/10)*10;
+	c = num - a - b;
+	d = a + b + c;
+	
 	cout << d << endl;
 	
 	return 0;

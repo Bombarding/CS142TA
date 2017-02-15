@@ -8,7 +8,7 @@ int main()
 	{
 		if ((n > 3) && (n < 7))
 		{
-			cout << "Green";
+			cout << "Green ";
 			n += 116;
 			continue;
 		}

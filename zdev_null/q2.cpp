@@ -17,7 +17,7 @@ int main()
 	d = ((r <= 27) && (x + 2 != 7))
 	//x^3
 	int x, e;
-	e = x^3;
+	e = x*x*x;
 	
 	return 0;
 }

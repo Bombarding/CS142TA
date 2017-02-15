@@ -12,16 +12,19 @@ int main()
 	
 	int n1a = n1;
 	int n2a = n2;
-	double dec1, dec2;
+	/*double dec1, dec2;
 	dec1 = n1 - n1a;
-	dec2 = n2 - n2a;
+	dec2 = n2 - n2a;*/
 	//+5
 	
-	if(dec1 >= 0.5)
+	int ch = 126%10;
+	cout << ch << endl;
+	
+	if(n1 - 0.5 >= n1a)
 	{
 		n1a += 1;
 	}
-	if(dec2 >= 0.5)
+	if(n2 - 0.5 >= n2a)
 	{
 		n2a += 1;
 	}
@@ -29,6 +32,7 @@ int main()
 	int a = n1a * n2a;
 	cout << a << endl;
 	//+5
+	
 	return 0;
 }
 /*

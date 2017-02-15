@@ -7,6 +7,9 @@ int main()
 	int c = 7;
 	int q = c + z;
 	char y = 't';
+	cout << "*q = " << q << endl;
+	cout << "*q-- = " << q-- << endl;
+	cout << "*q++ = " << q++ << endl;
 	if(q-- == 41)
 	{
 		q *= 3;
@@ -45,9 +48,14 @@ int main()
 	
 	return 0;
 }
-
 /*
-80
+*q = 42
+*q-- = 42
+*q++ = 41
+*c = 9
+*y = r
+*z/c = 3.88889
+42
 tip
 tacos
 r

@@ -5,11 +5,11 @@ int main()
 {
 	
 
-    for (int x = 0; x <= 1000; x+=6)
+    for (int num = 0; num <= 1000; num+=6)
     {
         
+        cout << num << " ";
         
-        cout << x << " ";
     }
 	
 	return 0;
