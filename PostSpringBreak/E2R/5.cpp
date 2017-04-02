@@ -12,7 +12,8 @@ using namespace std;
 int q(char, int);
 int m(int &);
 
-int main () {
+int main () 
+{
 
 	int p = 6;
 	char y;
@@ -23,16 +24,21 @@ int main () {
 	return 0;
 }
 
-int m(int & v) {
+int m(int & v) 
+{
 	v *= v + v;
 	return v;
 }
 
-int q(char y, int t) {
+int q(char y, int t) 
+{
 	cout << y << " " << t << endl;
 	if (y <= 'g')
+	{
 		return t;
-	else {
+	}
+	else 
+	{
 		cin >> y;
 		return q(y, t-1);
 	}

@@ -9,18 +9,19 @@ int main () {
 
 	int i = 0, j = 0;
 	for (int x = 0; x < 9; x++)
+	{
 		if (a[i] < b[j])
-			c[x] = a[i++];
+		{	c[x] = a[i++];}
 		else
-			c[x] = b[j++];
-
+		{	c[x] = b[j++];}
+	}
 	if (a[4] > b[4])
-		c[9] = a[4];
+		{c[9] = a[4];}
 	else
-		c[9] = b[4];
+		{c[9] = b[4];}
 
 	for (int x = 0; x < 10; x++)
-		cout << c[x] << " ";
+		{cout << c[x] << " ";}
 
 	cout << endl;
 
