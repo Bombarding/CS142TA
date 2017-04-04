@@ -42,4 +42,7 @@ why did computers get faster?
 
 Computers are flatlining now.
 
+Now that time and distance are relatively the same thing,
+Computer
+
 */
