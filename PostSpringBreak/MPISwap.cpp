@@ -38,9 +38,17 @@ int main (int argc, char * argv[]) {
 	
 	cout << my_rank << " " << message << endl;
 	//cout << endl;
-	MPI_Send(message, strlen(message) + 1, MPI_CHAR, 1, tag, MPI_COMM_WORLD);
-	MPI_Recv(message, 100, MPI_CHAR, 0, tag, MPI_COMM_WORLD, &status);
 	
+	if(my_rank == 0)
+	{
+		MPI_Send(message, strlen(message) + 1, MPI_CHAR, 1, tag, MPI_COMM_WORLD);
+		MPI_Recv(message, 100, MPI_CHAR, 1, tag, MPI_COMM_WORLD, &status);
+	}
+	if(my_rank == 1)
+	{
+		MPI_Send(message, strlen(message) + 1, MPI_CHAR, 0, tag, MPI_COMM_WORLD);
+		MPI_Recv(message, 100, MPI_CHAR, 0, tag, MPI_COMM_WORLD, &status);
+	}
 	cout << my_rank << " " << message << endl;
 		 
 	// Shut down MPI
