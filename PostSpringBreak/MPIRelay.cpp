@@ -76,6 +76,8 @@ int main (int argc, char * argv[]) {
 		MPI_Send(message, strlen(message) + 1, MPI_CHAR, 0, tag, MPI_COMM_WORLD);
 		cout << "Woop Woop, Thats the sound of the police!" << endl;
 	}
+	
+	
 	/*
 [asteel@thomas ~/CS142MPI]$ mpirun -np 5 blah
 0 is Running around the track
