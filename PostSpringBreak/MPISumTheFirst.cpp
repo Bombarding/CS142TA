@@ -59,14 +59,18 @@ int main (int argc, char * argv[]) {
 	//1. Knowing the Problem
 	int number = 300000; //n
 	double total = 0;
+	
 	//2. Break the Problem into Pieces
 	//P = 30. 300000/30 = 10000
 	int local_start = (my_rank*(number/p));
+	
 	//3. Do the Local Work
 	double local_sum = 0;
+	
 	//for(int x = local_start; x < (local_start + (number/p)); x++)
 	for(int x = local_start; x < (my_rank+1 * (number/p)); x++)
 		local_sum += x;
+		
 	//4. Combine the Local Work into 1 place
 	//Add up all the local sum variables into 1 total sum
 	//The boss process is called the overseeer
@@ -78,7 +82,7 @@ int main (int argc, char * argv[]) {
 		//Need a holding place for the mail as it comes in
 		double temp;
 		//there will be p-1 messages coming to me.
-		for(int x = 1; x< p; x++)
+		for(int x = 1; x < p; x++)
 		{
 			MPI_Recv(&temp, 1, MPI_DOUBLE, x, tag, MPI_COMM_WORLD, &status);
 			sum += temp;
