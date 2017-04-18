@@ -95,10 +95,13 @@ int main (int argc, char * argv[]) {
 			dotproduct += temp;	
 		}	
 	}
+	for(int a = 0; a < p; a++)
+		MPI_Reduce(&LocalDotProduct, &dotproduct, 1, MPI_DOUBLE, MPI_SUM, a, MPI_COMM_WORLD);
+	//Woot Woot **** MPI_Allreduce(&LocalDotProduct, &dotproduct, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+	
 	if(my_rank == 0)
 		cout << dotproduct << endl;
 	
-	MPI_Reduce(&LocalDotProduct, &dotproduct, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 	// Shut down MPI
 	MPI_Finalize();
 
@@ -106,6 +109,7 @@ int main (int argc, char * argv[]) {
 }
 
 /*
+	its schocial media
 	Dot Product
 	int ArrayA [] = {7,13,3,6,2,1}
 	int ArrayB [] = {2,4,6,8,10,12}
@@ -122,5 +126,10 @@ int main (int argc, char * argv[]) {
 	|
 	|
 	|
+	
+	
+	bad = 30 
+	reduce = 5
+	reduce in a loop = 5*30 = 150
 
 */
