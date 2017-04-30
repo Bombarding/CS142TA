@@ -114,6 +114,14 @@ int main (int argc, char * argv[])
 	//Fill Das Array
 	for (int x=0; x<n; x++)
 		a[x] = rand();//With an random number 0-199
+	
+	/*
+	
+	char a[n] = {0};
+	for (int x = 0; x < n; x++)
+		a[x] = (rand() % 26) + 'a';
+	
+	*/
  
 	// Remember that your average has to be a decimal value, like a float or a double!!!
 	// Also remember that you need to compute the minimum and maximum!
