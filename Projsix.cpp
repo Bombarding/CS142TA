@@ -114,6 +114,7 @@ int main (int argc, char * argv[])
 	//Fill Das Array
 	for (int x=0; x<n; x++)
 		a[x] = rand();//With an random number 0-199
+		cout << "a[x] = " << char(x) << endl;
 	
 	/*
 	
